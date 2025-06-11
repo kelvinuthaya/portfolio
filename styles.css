@@ -303,30 +303,48 @@ h2:hover::after {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.skills-list li {
-    padding: 15px 20px;
+.skills-list > li {
+    padding: 20px;
     background: var(--section-background);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-.skills-list li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .skills-list strong {
     color: var(--primary-color);
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.skills-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills-sublist li {
+    padding: 8px 15px;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.skills-sublist li:hover {
+    transform: translateX(5px);
+    background: var(--gradient);
+    color: white;
 }
 
 /* Section Contact */
