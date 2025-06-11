@@ -66,7 +66,7 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     margin-top: 15px;
 }
 
@@ -88,10 +88,10 @@ body {
 }
 
 .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
-    filter: brightness(0) invert(1);
+    filter: none;
 }
 
 /* Sections */
@@ -192,18 +192,17 @@ h2:hover::after {
 /* Section CV */
 #cv {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-iframe {
-    border: none;
-    margin: 20px 0;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-}
-
-iframe:hover {
-    transform: scale(1.01);
+#cv iframe {
+    max-width: 700px;
+    width: 100%;
+    height: 800px;
+    margin: 20px auto;
+    display: block;
 }
 
 .download-btn {
@@ -217,11 +216,8 @@ iframe:hover {
     font-weight: 600;
     transition: var(--transition);
     box-shadow: var(--box-shadow);
-}
-
-.download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    display: block;
 }
 
 /* Section Projets */
@@ -294,12 +290,10 @@ iframe:hover {
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius);
-    margin-top: 20px;
-    transition: var(--transition);
-}
-
-.project-image:hover {
-    transform: scale(1.02);
+    margin: 20px auto;
+    display: block;
+    max-height: 400px;
+    object-fit: contain;
 }
 
 /* Sections Listes */
@@ -307,18 +301,21 @@ iframe:hover {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .skills-list li {
-    padding: 15px;
+    padding: 15px 20px;
     background: var(--section-background);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .skills-list li:hover {
