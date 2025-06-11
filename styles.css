@@ -138,10 +138,28 @@ iframe {
 
 /* Section Projets */
 .project-card {
-    background-color: #f8f9fa;
+    background: #ffffff;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: var(--border-radius);
-    margin: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.project-card p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
 .project-link {
@@ -164,16 +182,24 @@ iframe {
 }
 
 /* Sections Listes */
-.skills-list, .formation-list, .soft-skills-list {
+.skills-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.skills-list li, .formation-list li, .soft-skills-list li {
-    margin: 15px 0;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-radius: var(--border-radius);
+.skills-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.skills-list li:last-child {
+    border-bottom: none;
+}
+
+.skills-list strong {
+    color: #2c3e50;
 }
 
 /* Section Contact */
@@ -185,21 +211,26 @@ iframe {
 }
 
 .contact-item {
-    text-align: center;
+    background: #ffffff;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: var(--border-radius);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
 }
 
 .contact-item a {
-    color: var(--primary-color);
+    color: #3498db;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
+    transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
-    text-decoration: underline;
+    color: #2980b9;
 }
 
 /* Media Queries */
@@ -218,8 +249,15 @@ iframe {
     }
 
     .section {
-        margin: 20px;
-        padding: 20px;
+        padding: 30px 15px;
+    }
+
+    .experience-card, .project-card {
+        padding: 15px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
     }
 
     h1 {
@@ -254,4 +292,44 @@ iframe {
 
 .section {
     animation: fadeIn 0.5s ease-out;
+}
+
+/* Styles pour les cartes d'expérience */
+.experience-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.experience-card p {
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Styles pour les sections */
+.section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.section h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
 } 
