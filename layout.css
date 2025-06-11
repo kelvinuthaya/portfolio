@@ -1,0 +1,90 @@
+/* Layout principal */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-left: 300px;
+  scroll-behavior: smooth;
+  width: calc(100% - 300px);
+}
+
+/* Profil fixe */
+.fixed-profile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background: var(--card-bg);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* Grilles communes */
+.skills-grid, .languages-grid, .contact-grid, .education-grid, .experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Grille des projets spécifique */
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Sections communes */
+section {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--box-shadow);
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content {
+    margin-left: 0;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .fixed-profile {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    overflow-y: visible;
+  }
+
+  .skills-grid, .languages-grid, .contact-grid, .education-grid, .experience-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+  
+  .skills-grid, .languages-grid, .contact-grid, .education-grid, .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  section { 
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+} 

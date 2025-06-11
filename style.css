@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --main-color: #4f46e5;
+  --bg-color: #f8fafc;
+  --text-color: #18181b;
+  --btn-bg: #4f46e5;
+  --btn-text: #fff;
+  --btn-hover-bg: #3730a3;
+  --radius: 1.2em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.container {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px 0 rgba(79,70,229,0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--main-color);
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(79,70,229,0.10);
+}
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--main-color);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #6366f1;
+  text-align: center;
+}
+
+.presentation {
+  font-size: 1rem;
+  text-align: center;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.7em 1.2em;
+  border-radius: 2em;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(79,70,229,0.08);
+}
+
+.btn:hover, .btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+/* Styles pour la section détaillée du CV */
+.cv-details {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 24px 0 rgba(79,70,229,0.08);
+  max-width: 800px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  margin: 0 auto;
+}
+
+.cv-details h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--main-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.cv-category {
+  margin-bottom: 2.5rem;
+  background: var(--bg-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.cv-category:last-child {
+  margin-bottom: 0;
+}
+
+.cv-category h3 {
+  color: var(--main-color);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.cv-item {
+  margin-bottom: 1.5rem;
+}
+
+.cv-item h4 {
+  color: #34495e;
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.cv-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.cv-item p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.cv-item ul {
+  list-style-type: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cv-item ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+.cv-item ul li:before {
+  content: "•";
+  color: var(--main-color);
+  position: absolute;
+  left: 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill-category h4 {
+  color: #34495e;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.skill-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill-category ul li {
+  padding: 0.3rem 0;
+  color: #555;
+}
+
+.languages-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.languages-list li {
+  padding: 0.5rem 0;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.languages-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .container {
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 0.95rem;
+  }
+
+  .profile-pic {
+    width: 90px;
+    height: 90px;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.6em 1em;
+  }
+
+  .cv-details {
+    padding: 0 0.5rem;
+  }
+
+  .cv-category {
+    padding: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
