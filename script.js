@@ -1,6 +1,6 @@
 // Gestion du téléchargement du CV
 document.getElementById('downloadCV').addEventListener('click', function() {
-    window.open('https://raw.githubusercontent.com/kelvinuthaya/kelvinutkportfolio/main/CV%20KLVN%202025.pdf', '_blank');
+    window.open('https://drive.google.com/uc?export=download&id=13KvxaBd0nV6DI3f87TiPlZ30qym7-m3q', '_blank');
 });
 
 // Animation au défilement
