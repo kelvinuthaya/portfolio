@@ -20,12 +20,20 @@
     box-sizing: border-box;
 }
 
+/* Police : Garamond avec fallback propre */
 body {
-    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    font-family: "Apple Garamond", Garamond, Georgia, serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
     overflow-x: hidden;
+}
+
+/* Règle robuste pour toutes les images (évite les débordements) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Section Profil */
@@ -57,6 +65,7 @@ body {
     border: 3px solid var(--accent-color);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    object-fit: cover;
 }
 
 .profile-img:hover {
@@ -230,7 +239,7 @@ h2:hover::after {
     transition: var(--transition);
     border: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* garde les coins arrondis sur l'image */
 }
 
 .project-card::before {
@@ -286,14 +295,22 @@ h2:hover::after {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.project-image {
-    max-width: 100%;
+/* Assure le rendu correct de toutes les images à l'intérieur des cards */
+.project-card img {
+    width: 100%;
     height: auto;
+    display: block;
+}
+
+/* Image de projet : visible même si le conteneur est étroit */
+.project-image {
+    width: 100%;
+    height: auto;           /* conserve le ratio */
+    /* pas de max-height bloquante pour éviter la disparition */
+    object-fit: contain;    /* garantie pas de recadrage */
+    background: #f5f5f7;    /* fond clair si bords visibles */
     border-radius: var(--border-radius);
     margin: 20px auto;
-    display: block;
-    max-height: 400px;
-    object-fit: contain;
 }
 
 /* Sections Listes */
@@ -561,4 +578,4 @@ h2:hover::after {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
-} 
+}
