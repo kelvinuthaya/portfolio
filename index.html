@@ -23,10 +23,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Kelvin Portfolio">
-    
+
+    <!-- Police : Apple Garamond (fallbacks système) -->
+    <style>
+        body {
+            font-family: "Apple Garamond", Garamond, Georgia, serif;
+        }
+    </style>
+
+    <!-- (Tu peux garder Google Fonts si d'autres sections du site utilisent Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS principal -->
     <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
@@ -67,6 +76,46 @@
         <button id="downloadCV" class="download-btn" style="margin-top: 20px;">📥 Télécharger mon CV</button>
     </section>
 
+    <!-- Section Expériences (PLACÉE APRÈS LE CV) -->
+    <section id="experiences" class="section">
+        <h2>💼 Expériences Professionnelles</h2>
+        <div class="experience-card">
+            <h3>STAGE – Assistant IT – CFP Group, Montrouge</h3>
+            <p><strong>Stage</strong></p>
+            <p>
+                Durant ce stage, j’ai participé à la restructuration du pôle IT dans un contexte de forte croissance. J’ai pris en charge la gestion complète des onboardings et offboardings (préparation du matériel, création des accès, accompagnement le jour J), tout en renforçant la sécurité des systèmes par le nettoyage des comptes obsolètes et la rédaction de supports internes (charte informatique, guide phishing, procédures techniques).
+            </p>
+            <p>
+                J’ai également optimisé la solution de téléphonie Aircall grâce à un audit approfondi, des correctifs techniques et une analyse statistique présentée à la direction. Enfin, j’ai mis en place un inventaire structuré du matériel et coordonné les réparations, garantissant une meilleure traçabilité et une continuité de service.
+            </p>
+            <p>
+                Cette première expérience en informatique m’a permis de développer des compétences techniques solides, de travailler en lien direct avec la direction et d’acquérir une vision concrète de la gestion de projets IT en entreprise.
+            </p>
+        </div>
+        <div class="experience-card">
+            <h3>Employé Polyvalent – Marché D'à Côté (Noisy-le-Grand)</h3>
+            <p><strong>Janvier 2023 – Avril 2023</strong></p>
+            <p>Accueil, caisse, réassort, gestion des colis.</p>
+        </div>
+        <div class="experience-card">
+            <h3>Employé restauration – Bagelstein (Paris)</h3>
+            <p><strong>Août 2021 – Septembre 2021</strong></p>
+            <p>Préparation, hygiène, facing, inventaire.</p>
+        </div>
+
+        <h2>🤝 Expériences Associatives</h2>
+        <div class="experience-card">
+            <h3>Responsable communication – BDE IUT Villetaneuse</h3>
+            <p><strong>Depuis octobre 2024</strong></p>
+            <p>Création d'affiches, gestion Instagram, coordination inter-pôles</p>
+        </div>
+        <div class="experience-card">
+            <h3>Directeur communication – CVL Blanche de Castille</h3>
+            <p><strong>2018–2020</strong></p>
+            <p>Community management (Instagram), organisation du bal de promo</p>
+        </div>
+    </section>
+
     <!-- Section Projets -->
     <section id="projets" class="section">
         <h2>📂 Mes Projets</h2>
@@ -98,6 +147,26 @@
         </div>
     </section>
 
+    <!-- Section Projets Personnels -->
+    <section id="projets-personnels" class="section">
+        <h2>🧪 Projets Personnels</h2>
+        <div class="project-card">
+            <h3>🎲 KELVINC – Jeu web “Des inconnus nous jugent”</h3>
+            <p>
+                Développement d’une application web inspirée du concept de Squeezie, permettant à deux groupes de personnes ne se connaissant que peu de s’évaluer anonymement via des questionnaires sur des traits de personnalité (ex. : “Qui est le plus drôle ?”).
+            </p>
+            <ul>
+                <li>Ajout dynamique des participants depuis l’interface (aucun code à modifier)</li>
+                <li>Formulaires personnalisés par groupe et par question</li>
+                <li>Calcul automatique des résultats (classements par nombre de “5” reçus)</li>
+                <li>Affichage du classement et du gagnant pour chaque question</li>
+            </ul>
+            <p>
+                Projet fullstack léger réalisé en <strong>Python (Flask)</strong> + <strong>HTML/CSS</strong>, avec stockage des données en JSON. Pensé pour être utilisable immédiatement via un simple lien, sans base de données ni configuration complexe.
+            </p>
+        </div>
+    </section>
+
     <!-- Section Compétences -->
     <section id="competences" class="section">
         <h2>🛠️ Compétences Techniques</h2>
@@ -123,6 +192,7 @@
                     <li>Figma</li>
                     <li>Canva</li>
                     <li>Suite Office</li>
+                    <li>Microsoft 365 administration</li>
                 </ul>
             </li>
             <li>
@@ -140,6 +210,7 @@
             <li>Autonomie et sens de l'organisation</li>
             <li>Communication</li>
             <li>Capacité d'adaptation</li>
+            <li>Gestion de projet</li>
         </ul>
 
         <h2>🌍 Langues</h2>
@@ -160,38 +231,6 @@
             <li><strong>2020–2021</strong> : Licence PASS – option Économie-Gestion</li>
             <li><strong>2019–2020</strong> : Bac Scientifique – Mention Assez Bien</li>
         </ul>
-    </section>
-
-    <!-- Section Expériences -->
-    <section id="experiences" class="section">
-        <h2>💼 Expériences Professionnelles</h2>
-        <div class="experience-card">
-            <h3>STAGE – Assistant IT – CFP Group, Montrouge</h3>
-            <p><strong>Stage</strong></p>
-            <p>Contribution à la refonte et au déploiement du nouveau département IT.<br> Développement d'une application d'inventaire du matériel informatique (PHP, JS).<br> Support technique et rédaction de guides utilisateurs internes.<br> Mise en place de processus d'onboarding/offboarding.</p>
-        </div>
-        <div class="experience-card">
-            <h3>Employé Polyvalent – Marché D'à Côté (Noisy-le-Grand)</h3>
-            <p><strong>Janvier 2023 – Avril 2023</strong></p>
-            <p>Accueil, caisse, réassort, gestion des colis.</p>
-        </div>
-        <div class="experience-card">
-            <h3>Employé restauration – Bagelstein (Paris)</h3>
-            <p><strong>Août 2021 – Septembre 2021</strong></p>
-            <p>Préparation, hygiène, facing, inventaire.</p>
-        </div>
-
-        <h2>🤝 Expériences Associatives</h2>
-        <div class="experience-card">
-            <h3>Responsable communication – BDE IUT Villetaneuse</h3>
-            <p><strong>Depuis octobre 2024</strong></p>
-            <p>Création d'affiches, gestion Instagram, coordination inter-pôles</p>
-        </div>
-        <div class="experience-card">
-            <h3>Directeur communication – CVL Blanche de Castille</h3>
-            <p><strong>2018–2020</strong></p>
-            <p>Community management (Instagram), organisation du bal de promo</p>
-        </div>
     </section>
 
     <!-- Section Contact -->
@@ -216,4 +255,4 @@
 
     <script src="script.js?v=2"></script>
 </body>
-</html> 
+</html>
