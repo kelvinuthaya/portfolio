@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function() {
             try {
-                window.open('https://drive.google.com/uc?export=download&id=13KvxaBd0nV6DI3f87TiPlZ30qym7-m3q', '_blank');
+                window.open('https://drive.google.com/file/d/1JlZQWKHug75Ha9luATTfEekJftJxgjpb', '_blank');
             } catch (error) {
                 console.error('Erreur lors du téléchargement du CV:', error);
             }
