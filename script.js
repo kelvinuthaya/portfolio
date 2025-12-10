@@ -1,13 +1,15 @@
 // Attendre que le DOM soit complètement chargé
 document.addEventListener('DOMContentLoaded', function() {
     const downloadBtn = document.getElementById('downloadCV');
+
     if (downloadBtn) {
-        downloadBtn.addEventListener('click', function() {
-            try {
-                window.open('https://drive.google.com/uc?export=download&confirm=yes&id=1O7Rk2l9kLq9RytW8HwWiN-E7dNrPYIdI', '_blank');
-            } catch (error) {
-                console.error('Erreur lors du téléchargement du CV:', error);
-            }
+        downloadBtn.addEventListener('click', function () {
+            const link = document.createElement('a');
+            link.href = 'CV_UTHAYAKUMAR_KELVIN_2026.pdf'; // chemin relatif dans ton projet
+            link.download = 'CV_UTHAYAKUMAR_KELVIN_2026.pdf'; // nom du fichier téléchargé
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     }
 });
