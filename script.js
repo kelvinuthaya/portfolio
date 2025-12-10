@@ -4,13 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function() {
             try {
-                window.open('https://drive.google.com/uc?export=download&id=1O7Rk2l9kLq9RytW8HwWiN-E7dNrPYIdI', '_blank');
+                window.open('https://drive.google.com/uc?export=download&confirm=yes&id=1O7Rk2l9kLq9RytW8HwWiN-E7dNrPYIdI', '_blank');
             } catch (error) {
                 console.error('Erreur lors du téléchargement du CV:', error);
             }
         });
     }
 });
+
+
 
 
     // Animation au défilement
