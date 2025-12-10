@@ -1,16 +1,17 @@
 // Attendre que le DOM soit complètement chargé
 document.addEventListener('DOMContentLoaded', function() {
-    // Gestion du téléchargement du CV
     const downloadBtn = document.getElementById('downloadCV');
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function() {
             try {
-                window.open('https://drive.google.com/file/d/1O7Rk2l9kLq9RytW8HwWiN-E7dNrPYIdI', '_blank');
+                window.open('https://drive.google.com/uc?export=download&id=1O7Rk2l9kLq9RytW8HwWiN-E7dNrPYIdI', '_blank');
             } catch (error) {
                 console.error('Erreur lors du téléchargement du CV:', error);
             }
         });
     }
+});
+
 
     // Animation au défilement
     const sections = document.querySelectorAll('.section');
