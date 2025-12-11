@@ -3,274 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>Kelvin UTHAYAKUMAR - Portfolio</title>
-    
-    <!-- Favicon configuration -->
-    <link rel="icon" type="image/png" sizes="32x32" href="FMTM.png?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="FMTM.png?v=2">
-    <link rel="shortcut icon" type="image/png" href="FMTM.png?v=2">
-    <link rel="apple-touch-icon" sizes="180x180" href="FMTM.png?v=2">
-    <link rel="apple-touch-icon" sizes="152x152" href="FMTM.png?v=2">
-    <link rel="apple-touch-icon" sizes="144x144" href="FMTM.png?v=2">
-    <link rel="apple-touch-icon" sizes="120x120" href="FMTM.png?v=2">
-    <link rel="apple-touch-icon" href="FMTM.png?v=2">
-    <meta name="msapplication-TileImage" content="FMTM.png?v=2">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Kelvin Portfolio">
 
-    <!-- Police : Apple Garamond (fallbacks système) -->
+    <title>Kelvin UTHAYAKUMAR – Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css?v=6">
+
+    <!-- AOS Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <style>
-        body {
-            font-family: "Apple Garamond", Garamond, Georgia, serif;
+        /* Sticky navbar */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Résumé des compétences */
+        .resume-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: auto;
+            background: #fafafa;
         }
     </style>
 
-    <!-- (Tu peux garder Google Fonts si d'autres sections du site utilisent Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
-    <!-- Photo de profil et icônes sociales -->
+
+<!-- NAVBAR -->
+<nav>
+    <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ACCUEIL -->
+<section id="accueil" class="section" data-aos="fade-up">
     <div class="profile-section">
-        <img src="profile.jpg" alt="Photo de profil" class="profile-img">
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/kelvinuthaya" target="_blank" rel="noopener" title="Mon LinkedIn">
-                <img src="linkedin-logo-linkedin-icon-transparent-free-png.png?v=2" alt="LinkedIn" style="width: 32px; height: 32px;">
-            </a>
-            <a href="https://github.com/kelvinuthaya" target="_blank" rel="noopener" title="Mon GitHub">
-                <img src="25231.png?v=2" alt="GitHub" style="width: 32px; height: 32px;">
-            </a>
-        </div>
+        <img src="profile.jpg" class="profile-img" loading="lazy" alt="Kelvin">
     </div>
 
-    <!-- Section Accueil -->
-    <section id="accueil" class="section">
-        <h1>Bienvenue sur mon Portfolio ! 👋</h1>
-        <p>
-            Je suis Kelvin, étudiant en B.U.T Informatique à l'Université Sorbonne Paris Nord<br>
-            <strong>Concevoir, coder, apprendre : voilà ce qui m'anime.</strong><br>
-            Actuellement en recherche d'un <strong>stage de 4 mois dès mars 2026</strong> en développement web, je souhaite mettre mes compétences au service de projets concrets et innovants.<br>
-            Vous trouverez dans ce portfolio un aperçu complet de mon parcours, de mes projets et de mes compétences
-        </p>
-        <h3 class="section-text">🚀 Explorez mon portfolio en faisant défiler la page !</h3>
-    </section>
+    <h1>Bienvenue ! 👋</h1>
+    <p>
+        Étudiant en BUT Informatique et passionné par le développement logiciel,  
+        je recherche un stage de 16 semaines à partir de <strong>mars 2026</strong>.
+    </p>
+</section>
 
-    <!-- Section CV -->
-    <section id="cv" class="section">
-        <h2>📄 Mon CV</h2>
-        <p>Vous pouvez consulter mon CV ci-dessous ou le télécharger.</p>
-        <div class="cv-container" style="width: 100%; max-width: 700px; margin: 0 auto;">
-            <iframe src="https://drive.google.com/file/d/1O7Rk2l9kLq9RytW8HwWiN-E7dNrPYIdI/preview" 
-                    style="width: 100%; height: 800px; border: none; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
-                    title="CV de Kelvin UTHAYAKUMAR"></iframe>
-        </div>
-        <button id="downloadCV" class="download-btn" style="margin-top: 20px;">📥 Télécharger mon CV</button>
-    </section>
+<!-- CV -->
+<section id="cv" class="section" data-aos="fade-up">
+    <h2>📄 Mon CV</h2>
 
-    <!-- Section Expériences (PLACÉE APRÈS LE CV) -->
-    <section id="experiences" class="section">
-        <h2>💼 Expériences Professionnelles</h2>
-        <div class="experience-card">
-            <h3>STAGE – Assistant IT – CFP Group, Montrouge</h3>
-            <p><strong>Stage</strong></p>
-            <p>
-                Durant ce stage, j’ai participé à la restructuration du pôle IT dans un contexte de forte croissance. J’ai pris en charge la gestion complète des onboardings et offboardings (préparation du matériel, création des accès, accompagnement le jour J), tout en renforçant la sécurité des systèmes par le nettoyage des comptes obsolètes et la rédaction de supports internes (charte informatique, guide phishing, procédures techniques).
-            </p>
-            <p>
-                J’ai également optimisé la solution de téléphonie Aircall grâce à un audit approfondi, des correctifs techniques et une analyse statistique présentée à la direction. Enfin, j’ai mis en place un inventaire structuré du matériel et coordonné les réparations, garantissant une meilleure traçabilité et une continuité de service.
-            </p>
-            <p>
-                Cette première expérience en informatique m’a permis de développer des compétences techniques solides, de travailler en lien direct avec la direction et d’acquérir une vision concrète de la gestion de projets IT en entreprise.
-            </p>
-        </div>
-        <div class="experience-card">
-            <h3>Employé Polyvalent – Marché D'à Côté (Noisy-le-Grand)</h3>
-            <p><strong>Janvier 2023 – Avril 2023</strong></p>
-            <p>Accueil, caisse, réassort, gestion des colis.</p>
-        </div>
-        <div class="experience-card">
-            <h3>Employé restauration – Bagelstein (Paris)</h3>
-            <p><strong>Août 2021 – Septembre 2021</strong></p>
-            <p>Préparation, hygiène, facing, inventaire.</p>
-        </div>
+    <!-- Affichage du CV local -->
+    <iframe src="CV_UTHAYAKUMAR_KELVIN_2026.pdf"
+            style="width:100%;max-width:800px;height:900px;border:none;border-radius:12px;"
+            loading="lazy"></iframe>
 
-        <h2>🤝 Expériences Associatives</h2>
-        <div class="experience-card">
-            <h3>Responsable communication – BDE IUT Villetaneuse</h3>
-            <p><strong>Depuis octobre 2024</strong></p>
-            <p>Création d'affiches, gestion Instagram, coordination inter-pôles</p>
-        </div>
-        <div class="experience-card">
-            <h3>Directeur communication – CVL Blanche de Castille</h3>
-            <p><strong>2018–2020</strong></p>
-            <p>Community management (Instagram), organisation du bal de promo</p>
-        </div>
-    </section>
+    <!-- Bouton de téléchargement -->
+    <button id="downloadCV" class="download-btn">📥 Télécharger mon CV</button>
+</section>
 
-    <!-- Section Projets -->
-    <section id="projets" class="section">
-        <h2>📂 Mes Projets</h2>
-        <div class="project-card">
-            <h3>🎮 KEYboard – Plateforme web communautaire</h3>
-            <p>
-                Développement d’une plateforme web communautaire pour les passionnés de jeux vidéo.
-                Mise en œuvre d’une architecture <strong>MVC</strong> en <strong>PHP</strong>, avec une base de données modélisée en
-                <strong>MEA</strong>.
-            </p>
-            <ul>
-                <li>Authentification des utilisateurs</li>
-                <li>Création de listes personnalisées</li>
-                <li>Notation des jeux</li>
-                <li>Commentaires et retours</li>
-            </ul>
-            <p>
-                Stack&nbsp;: <strong>PostgreSQL</strong>, <strong>HTML/CSS</strong>, <strong>JavaScript</strong>, <strong>PHP (MVC)</strong>.
-            </p>
-        </div>
-        <div class="project-card">
-            <h3>🌐 Projet THALES – Acquisition automatique de données</h3>
-            <p>
-                Web scraping de brevets 6G, base automatisée, tableau de bord interactif Streamlit, génération de fichiers Excel.
-            </p>
-            <a href="https://aadmsi.streamlit.app" target="_blank" rel="noopener" class="project-link">Voir le projet AADMSI ici</a>
-            <img src="aadmsi.png?v=2" alt="Capture d'écran du projet AADMSI" class="project-image" style="max-width: 100%; height: auto; max-height: 400px; object-fit: contain;">
-        </div>
-        <div class="project-card">
-            <h3>📊 SAE – Enquête diplômés IUT</h3>
-            <p>
-                Réalisation d’un questionnaire sur les poursuites d’études et les insertions professionnelles des diplômés.
-            </p>
-            <ul>
-                <li>Mise en ligne, diffusion et collecte des réponses (<strong>Sphinx</strong>)</li>
-                <li>Analyse et visualisation des données avec <strong>Python</strong> (<em>Pandas</em>, <em>Matplotlib</em>)</li>
-                <li>Rédaction d’un rapport global</li>
-                <li>Présentation des résultats lors d’un conseil d’institut</li>
-          </ul>
-        </div>
-        <div class="project-card">
-            <h3>🌊 Nuit de l'Info</h3>
-            <p>
-                Application web éducative sur les liens entre océans et humains, développée en équipe pendant une nuit blanche.
-            </p>
-        </div>
-    </section>
+<!-- RÉSUMÉ DE COMPÉTENCES -->
+<section class="section" id="resume" data-aos="fade-up">
+    <h2>🧠 Résumé de compétences</h2>
 
-    <!-- Section Projets Personnels -->
-    <section id="projets-personnels" class="section">
-        <h2>🧪 Projets Personnels</h2>
-        <div class="project-card">
-            <h3>🎲 KELVINC – Jeu web “Des inconnus nous jugent”</h3>
-            <p>
-                Développement d’une application web inspirée du concept de Squeezie, permettant à deux groupes de personnes ne se connaissant que peu de s’évaluer anonymement via des questionnaires sur des traits de personnalité (ex. : “Qui est le plus drôle ?”).
-            </p>
-            <ul>
-                <li>Ajout dynamique des participants depuis l’interface (aucun code à modifier)</li>
-                <li>Formulaires personnalisés par groupe et par question</li>
-                <li>Calcul automatique des résultats (classements par nombre de “5” reçus)</li>
-                <li>Affichage du classement et du gagnant pour chaque question</li>
-            </ul>
-            <p>
-                Projet fullstack léger réalisé en <strong>Python (Flask)</strong> + <strong>HTML/CSS</strong>, avec stockage des données en JSON. Pensé pour être utilisable immédiatement via un simple lien, sans base de données ni configuration complexe.
-            </p>
-        </div>
-    </section>
+    <div class="resume-box">
+        <h3>Développement</h3>
+        <p>React · JavaScript · Python · Flutter/Dart · Node.js · Express · API REST</p>
 
-    <!-- Section Compétences -->
-    <section id="competences" class="section">
-        <h2>🛠️ Compétences Techniques</h2>
-        <ul class="skills-list">
-            <li>
-                <strong>Langages de programmation</strong>
-                <ul class="skills-sublist">
-                    <li>Python</li>
-                    <li>R</li>
-                    <li>SQL</li>
-                    <li>Java</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>PHP</li>
-                </ul>
-            </li>
-            <li>
-                <strong>Outils</strong>
-                <ul class="skills-sublist">
-                    <li>Streamlit</li>
-                    <li>Power BI</li>
-                    <li>Figma</li>
-                    <li>Canva</li>
-                    <li>Suite Office</li>
-                    <li>Microsoft 365 administration</li>
-                </ul>
-            </li>
-            <li>
-                <strong>Autres</strong>
-                <ul class="skills-sublist">
-                    <li>Droit du numérique</li>
-                    <li>Gestion de projet Agile</li>
-                </ul>
-            </li>
-        </ul>
+        <h3>Données & Modèles</h3>
+        <p>PCA · K-Means · analyse de données · MCD/MLD/UML · PostgreSQL · MongoDB</p>
 
-        <h2>💡 Soft Skills</h2>
-        <ul class="skills-list">
-            <li>Aptitude rédactionnelle</li>
-            <li>Autonomie et sens de l'organisation</li>
-            <li>Communication</li>
-            <li>Capacité d'adaptation</li>
-            <li>Gestion de projet</li>
-        </ul>
+        <h3>IT & Gestion de projet</h3>
+        <p>Onboarding/Offboarding · Documentation · Optimisation · Méthodes Agile</p>
+    </div>
+</section>
 
-        <h2>🌍 Langues</h2>
-        <ul class="skills-list">
-            <li>Français (langue maternelle)</li>
-            <li>Anglais (C1 – TOEIC)</li>
-            <li>Tamoul (bilingue)</li>
-            <li>Espagnol (B2)</li>
-        </ul>
-    </section>
+<!-- PROJETS -->
+<section id="projets" class="section" data-aos="fade-up">
+    <h2>📂 Projets</h2>
 
-    <!-- Section Formation -->
-    <section id="formation" class="section">
-        <h2>📚 Formation</h2>
-        <ul class="formation-list">
-            <li><strong>2025–2026</strong> : BUT Informatique – 3e année - IUT de Villetaneuse</li>
-            <li><strong>2024–2025</strong> : BUT Informatique – 2e année (passerelle) - IUT de Villetaneuse</li>
-            <li><strong>2021–2024</strong> : Licence Sciences Sanitaires et Sociales – obtenue (180 ECTS)</li>
-            <li><strong>2020–2021</strong> : Licence PASS – option Économie-Gestion</li>
-            <li><strong>2019–2020</strong> : Bac Scientifique – Mention Assez Bien</li>
-        </ul>
-    </section>
+    <div class="project-card">
+        <h3>TRACKSTAR – Application mobile de recommandation musicale</h3>
+        <p>Système de swipe, analyse PCA, clustering K-means, génération de playlists personnalisées.</p>
+        <p><strong>Stack :</strong> Flutter · Dart · Python</p>
+        <a href="#" target="_blank">→ GitHub</a>
+    </div>
 
-    <!-- Section Contact -->
-    <section id="contact" class="section">
-        <h2>📬 Me Contacter</h2>
-        <p>N'hésitez pas à me contacter pour toute opportunité de stage ou d'alternance à partir de septembre 2025.</p>
-        <div class="contact-grid">
-            <div class="contact-item">
-                <h3>📧 Email</h3>
-                <a href="mailto:kelvinutk@gmail.com">kelvinutk@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <h3>💼 LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/kelvinuthaya" target="_blank" rel="noopener">Mon Profil LinkedIn</a>
-            </div>
-            <div class="contact-item">
-                <h3>🐍 GitHub</h3>
-                <a href="https://github.com/kelvinuthaya" target="_blank" rel="noopener">Mon GitHub</a>
-            </div>
-        </div>
-    </section>
+    <div class="project-card">
+        <h3>Projet THALES – Acquisition automatique de données 6G</h3>
+        <p>Automatisation, scraping, dashboard Streamlit, analyse de données et export Excel.</p>
+        <p><strong>Stack :</strong> Python · Streamlit</p>
+        <a href="https://aadmsi.streamlit.app" target="_blank">→ Application</a>
+    </div>
 
-    <script src="script.js?v=2"></script>
+    <div class="project-card">
+        <h3>Nuit de l’Info – Concours national</h3>
+        <p>Web app éducative illustrant les parallèles entre systèmes humains et océaniques.</p>
+        <a href="#" target="_blank">→ GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Wrap It All! – Analyse de l’historique Spotify</h3>
+        <p>API Spotify, extraction automatique, détection de patterns, interface NiceGUI.</p>
+        <a href="#" target="_blank">→ GitHub</a>
+    </div>
+
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences" class="section" data-aos="fade-up">
+    <h2>🛠️ Compétences Techniques</h2>
+
+    <ul>
+        <li>Python · R · SQL · JavaScript · React · Node.js · Dart/Flutter</li>
+        <li>PostgreSQL · MongoDB · UML · MCD/MLD</li>
+        <li>Figma · Suite Office · Microsoft 365 Admin</li>
+    </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" data-aos="fade-up">
+    <h2>📬 Me contacter</h2>
+    <a class="btn" href="mailto:kelvinutk@gmail.com">📧 Envoyer un mail</a>
+</section>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- Script perso -->
+<script src="script.js?v=6"></script>
+
 </body>
 </html>
