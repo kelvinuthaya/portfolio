@@ -36,12 +36,42 @@ img {
     display: block;
 }
 
-/* Section Profil */
+/* === NAVBAR FIXE ET STYLÉE === */
+nav.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    padding: 12px 0;
+}
+
+nav.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Section Profil (carré flottant) */
 .profile-section {
     position: fixed;
-    top: 30px;
-    right: 30px;
-    z-index: 1000;
+    top: 110px; /* pour être bien sous la navbar */
+    right: 40px;
+    z-index: 900;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,7 +133,7 @@ img {
     filter: none;
 }
 
-/* Sections */
+/* Sections génériques */
 .section {
     max-width: 1200px;
     margin: 60px auto;
@@ -113,6 +143,7 @@ img {
     box-shadow: var(--box-shadow);
     position: relative;
     overflow: hidden;
+    animation: fadeInUp 0.6s ease-out;
 }
 
 .section::before {
@@ -302,18 +333,17 @@ h2:hover::after {
     display: block;
 }
 
-/* Image de projet : visible même si le conteneur est étroit */
+/* Image de projet */
 .project-image {
     width: 100%;
-    height: auto;           /* conserve le ratio */
-    /* pas de max-height bloquante pour éviter la disparition */
-    object-fit: contain;    /* garantie pas de recadrage */
-    background: #f5f5f7;    /* fond clair si bords visibles */
+    height: auto;
+    object-fit: contain;
+    background: #f5f5f7;
     border-radius: var(--border-radius);
     margin: 20px auto;
 }
 
-/* Sections Listes */
+/* Sections Compétences */
 .skills-list {
     list-style: none;
     padding: 0;
@@ -364,6 +394,15 @@ h2:hover::after {
     color: white;
 }
 
+/* ESPACE ENTRE BLOCS DANS #competences (Soft Skills / Langues) */
+#competences h2 {
+    margin-top: 50px !important;
+}
+
+#competences .skills-list {
+    margin-bottom: 25px;
+}
+
 /* Section Contact */
 .contact-grid {
     display: grid;
@@ -405,6 +444,85 @@ h2:hover::after {
 .contact-item a:hover {
     color: var(--secondary-color);
     transform: translateY(-2px);
+}
+
+/* Styles pour les cartes d'expérience */
+.experience-card {
+    background: var(--section-background);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card:hover::before {
+    opacity: 1;
+}
+
+.experience-card h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.experience-card p {
+    color: var(--text-light);
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Media Queries */
@@ -495,87 +613,4 @@ h2:hover::after {
         width: 100%;
         padding: 12px 20px;
     }
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.section {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Styles pour les cartes d'expérience */
-.experience-card {
-    background: var(--section-background);
-    border-radius: var(--border-radius);
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.experience-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--gradient);
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.experience-card:hover::before {
-    opacity: 1;
-}
-
-.experience-card h3 {
-    color: var(--text-color);
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.experience-card p {
-    color: var(--text-light);
-    margin: 8px 0;
-    line-height: 1.6;
-}
-
-/* Scrollbar personnalisée */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--background-color);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--gradient);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color);
 }

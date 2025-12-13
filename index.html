@@ -6,157 +6,189 @@
 
     <title>Kelvin UTHAYAKUMAR – Portfolio</title>
 
+    <!-- CSS principal -->
     <link rel="stylesheet" href="css/styles.css?v=6">
 
     <!-- AOS Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <style>
-        /* Sticky navbar */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: white;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            list-style: none;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-
-        /* Résumé des compétences */
-        .resume-box {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 800px;
-            margin: auto;
-            background: #fafafa;
-        }
-    </style>
-
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <!-- NAVBAR STICKY -->
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- ACCUEIL -->
-<section id="accueil" class="section" data-aos="fade-up">
+    <!-- CARRE FLOTTANT : PP + ICONES (repris de l'ancienne version) -->
     <div class="profile-section">
-        <img src="assets/profile.jpg" class="profile-img" loading="lazy" alt="Kelvin">
+        <img src="assets/profile.jpg" alt="Photo de profil" class="profile-img">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/kelvinuthaya" target="_blank" rel="noopener" title="Mon LinkedIn">
+                <img src="assets/logos/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/kelvinuthaya" target="_blank" rel="noopener" title="Mon GitHub">
+                <img src="assets/logos/25231.png" alt="GitHub" class="social-icon">
+            </a>
+        </div>
     </div>
 
-    <h1>Bienvenue ! 👋</h1>
-    <p>
-        Étudiant en BUT Informatique et passionné par le développement logiciel,  
-        je recherche un stage de 16 semaines à partir de <strong>mars 2026</strong>.
-    </p>
-</section>
+    <!-- ACCUEIL -->
+    <section id="accueil" class="section" data-aos="fade-up">
+        <h1>Bienvenue sur mon Portfolio ! 👋</h1>
+        <p>
+            Je suis Kelvin, étudiant en B.U.T Informatique à l'Université Sorbonne Paris Nord<br>
+            Actuellement en recherche d'un <strong>stage de 16 semaines dès mars 2026</strong> en développement logiciel, je souhaite mettre mes compétences au service de projets concrets et innovants.<br>
+            Vous trouverez dans ce portfolio un aperçu complet de mon parcours, de mes projets et de mes compétences.
+        </p>
+        <h3 class="section-text">Explorez mon portfolio en faisant défiler la page !</h3>
+    </section>
 
-<!-- CV -->
-<section id="cv" class="section" data-aos="fade-up">
-    <h2>📄 Mon CV</h2>
+    <!-- CV (VERSION LOCALE) -->
+    <section id="cv" class="section" data-aos="fade-up">
+        <h2>📄 Mon CV</h2>
+        <p>Vous pouvez consulter mon CV ci-dessous ou le télécharger.</p>
+        <div class="cv-container" style="width: 100%; max-width: 800px; margin: 0 auto;">
+            <iframe src="assets/CV_UTHAYAKUMAR_KELVIN_2026.pdf"
+                    style="width: 100%; height: 900px; border: none; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
+                    loading="lazy"
+                    title="CV de Kelvin UTHAYAKUMAR"></iframe>
+        </div>
+        <button id="downloadCV" class="download-btn" style="margin-top: 20px;">📥 Télécharger mon CV</button>
+    </section>
 
-    <!-- Affichage du CV local -->
-    <iframe src="assets/CV_UTHAYAKUMAR_KELVIN_2026.pdf"
-            style="width:100%;max-width:800px;height:900px;border:none;border-radius:12px;"
-            loading="lazy"></iframe>
 
-    <!-- Bouton de téléchargement -->
-    <button id="downloadCV" class="download-btn">📥 Télécharger mon CV</button>
-</section>
+    <!-- PROJETS (nouvelle version) -->
+    <section id="projets" class="section" data-aos="fade-up">
+        <h2>📂 Projets</h2>
 
-<!-- RÉSUMÉ DE COMPÉTENCES -->
-<section class="section" id="resume" data-aos="fade-up">
-    <h2>🧠 Résumé de compétences</h2>
+        <div class="project-card">
+            <h3>TRACKSTAR – Application mobile de recommandation musicale</h3>
+            <p>Système de swipe, analyse PCA, clustering K-means, génération de playlists personnalisées.</p>
+            <p><strong>Stack :</strong> Flutter · Dart · Python</p>
+            <a href="#" target="_blank" class="project-link">→ GitHub</a>
+        </div>
 
-    <div class="resume-box">
-        <h3>Développement</h3>
-        <p>React · JavaScript · Python · Flutter/Dart · Node.js · Express · API REST</p>
+        <div class="project-card">
+            <h3>Projet THALES – Acquisition automatique de données 6G</h3>
+            <p>Automatisation d’une base de brevets académiques 6G, dashboard Streamlit et génération de fichiers Excel.</p>
+            <p><strong>Stack :</strong> Python · Streamlit</p>
+            <a href="https://aadmsi.streamlit.app" target="_blank" rel="noopener" class="project-link">→ Application</a>
+        </div>
 
-        <h3>Données & Modèles</h3>
-        <p>PCA · K-Means · analyse de données · MCD/MLD/UML · PostgreSQL · MongoDB</p>
+        <div class="project-card">
+            <h3>Nuit de l’Info – Concours national</h3>
+            <p>Application web éducative sur les liens entre océans et humains, développée en équipe pendant une nuit blanche.</p>
+            <a href="#" target="_blank" class="project-link">→ GitHub</a>
+        </div>
 
-        <h3>IT & Gestion de projet</h3>
-        <p>Onboarding/Offboarding · Documentation · Optimisation · Méthodes Agile</p>
-    </div>
-</section>
+        <div class="project-card">
+            <h3>Wrap It All! – Analyse de l’historique Spotify</h3>
+            <p>API Spotify, extraction automatique, détection de patterns annuels, interface NiceGUI.</p>
+            <a href="#" target="_blank" class="project-link">→ GitHub</a>
+        </div>
+    </section>
 
-<!-- PROJETS -->
-<section id="projets" class="section" data-aos="fade-up">
-    <h2>📂 Projets</h2>
+    <!-- COMPETENCES TECHNIQUES (ancienne structure améliorée) -->
+    <section id="competences" class="section" data-aos="fade-up">
+        <h2>🛠️ Compétences Techniques</h2>
+        <ul class="skills-list">
+            <li>
+                <strong>Langages de programmation</strong>
+                <ul class="skills-sublist">
+                    <li>Python</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                    <li>Java</li>
+                    <li>HTML/CSS/JavaScript</li>
+                    <li>MongoDB</li>
+                    <li>PHP</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Outils</strong>
+                <ul class="skills-sublist">
+                    <li>Streamlit</li>
+                    <li>Power BI</li>
+                    <li>Figma</li>
+                    <li>Canva</li>
+                    <li>Suite Office</li>
+                    <li>Microsoft 365 Admin : Azure, Teams, Sharepoint</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Autres</strong>
+                <ul class="skills-sublist">
+                    <li>Droit du numérique</li>
+                    <li>Gestion de projet Agile</li>
+                    <li>Trello</li>
+                    <li>Figma</li>
+                </ul>
+            </li>
+        </ul>
 
-    <div class="project-card">
-        <h3>TRACKSTAR – Application mobile de recommandation musicale</h3>
-        <p>Système de swipe, analyse PCA, clustering K-means, génération de playlists personnalisées.</p>
-        <p><strong>Stack :</strong> Flutter · Dart · Python</p>
-        <a href="#" target="_blank">→ GitHub</a>
-    </div>
+        <h2>💡 Soft Skills</h2>
+        <ul class="skills-list">
+            <li>Aptitude rédactionnelle</li>
+            <li>Autonomie et sens de l'organisation</li>
+            <li>Communication</li>
+            <li>Capacité d'adaptation</li>
+            <li>Gestion de projet</li>
+        </ul>
 
-    <div class="project-card">
-        <h3>Projet THALES – Acquisition automatique de données 6G</h3>
-        <p>Automatisation, scraping, dashboard Streamlit, analyse de données et export Excel.</p>
-        <p><strong>Stack :</strong> Python · Streamlit</p>
-        <a href="https://aadmsi.streamlit.app" target="_blank">→ Application</a>
-    </div>
+        <h2>🌍 Langues</h2>
+        <ul class="skills-list">
+            <li>Français (langue maternelle)</li>
+            <li>Anglais (C1 – TOEIC)</li>
+            <li>Tamoul (bilingue)</li>
+            <li>Espagnol (B2)</li>
+        </ul>
+    </section>
 
-    <div class="project-card">
-        <h3>Nuit de l’Info – Concours national</h3>
-        <p>Web app éducative illustrant les parallèles entre systèmes humains et océaniques.</p>
-        <a href="#" target="_blank">→ GitHub</a>
-    </div>
+    <!-- FORMATION (ancienne version) -->
+    <section id="formation" class="section" data-aos="fade-up">
+        <h2>📚 Formation</h2>
+        <ul class="formation-list">
+            <li><strong>2025–2026</strong> : BUT Informatique parcours RADCV – 3e année - IUT de Villetaneuse</li>
+            <li><strong>2024–2025</strong> : BUT Informatique – Passerelle Informatique & Data Science - 2e année - IUT de Villetaneuse</li>
+            <li><strong>2021–2024</strong> : Licence Sciences Sanitaires et Sociales – obtenue (180 ECTS)</li>
+            <li><strong>2020–2021</strong> : Licence PASS – option Économie-Gestion</li>
+            <li><strong>2019–2020</strong> : Bac Scientifique – Mention Assez Bien</li>
+        </ul>
+    </section>
 
-    <div class="project-card">
-        <h3>Wrap It All! – Analyse de l’historique Spotify</h3>
-        <p>API Spotify, extraction automatique, détection de patterns, interface NiceGUI.</p>
-        <a href="#" target="_blank">→ GitHub</a>
-    </div>
+    <!-- CONTACT : ANCIENNE VERSION REPRIS (3 CARTES) -->
+    <section id="contact" class="section" data-aos="fade-up">
+        <h2>📬 Me Contacter</h2>
+        <p>N'hésitez pas à me contacter pour toute opportunité de stage à partir de mars 2026.</p>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <a href="mailto:kelvinutk@gmail.com">kelvinutk@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <h3>💼 LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/kelvinuthaya" target="_blank" rel="noopener">Mon Profil LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <h3>🐍 GitHub</h3>
+                <a href="https://github.com/kelvinuthaya" target="_blank" rel="noopener">Mon GitHub</a>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
 
-<!-- COMPÉTENCES -->
-<section id="competences" class="section" data-aos="fade-up">
-    <h2>🛠️ Compétences Techniques</h2>
-
-    <ul>
-        <li>Python · R · SQL · JavaScript · React · Node.js · Dart/Flutter</li>
-        <li>PostgreSQL · MongoDB · UML · MCD/MLD</li>
-        <li>Figma · Suite Office · Microsoft 365 Admin</li>
-    </ul>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section" data-aos="fade-up">
-    <h2>📬 Me contacter</h2>
-    <a class="btn" href="mailto:kelvinutk@gmail.com">📧 Envoyer un mail</a>
-</section>
-
-<!-- AOS -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init();</script>
-
-<!-- Script perso -->
-<script src="js/script.js?v=6"></script>
+    <!-- Script perso -->
+    <script src="js/script.js?v=6"></script>
 
 </body>
 </html>
